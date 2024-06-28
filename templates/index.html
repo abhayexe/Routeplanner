@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSP Route Planner</title>
+</head>
+<body>
+    <h1>TSP Route Planner</h1>
+    <form method="POST">
+        <label for="start_location">Start Location:</label>
+        <input type="text" id="start_location" name="start_location" required>
+        <br>
+        <label for="places">Place Names:</label>
+        <div id="places">
+            <input type="text" name="places" required>
+        </div>
+        <button type="button" onclick="addPlaceInput()">Add Another Place</button>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function addPlaceInput() {
+            var div = document.getElementById('places');
+            var input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'places';
+            div.appendChild(input);
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSP Route Planner</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            /* background-image: url('https://example.com/your-background-image.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat; */
+            background-color: #b3fff1;
+            /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+            background-color: #00f2a2;
+            opacity: 1;
+            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #00f2a2 40px ), repeating-linear-gradient( #006aff55, #006aff ); */
+        }
+        .container {
+            margin-top: 200px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.217);
+            background: rgb(255, 255, 255); /* Make the card background semi-transparent */
+            color: #000;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Route Planner</h1>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="start_location">Start Location:</label>
+                        <input type="text" class="form-control" id="start_location" name="start_location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="places">Place Names:</label>
+                        <div id="places">
+                            <input type="text" class="form-control" name="places" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary mb-2" onclick="addPlaceInput()">Add Another Place</button>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addPlaceInput() {
+            var div = document.getElementById('places');
+            var input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'places';
+            input.className = 'form-control mt-2';
+            div.appendChild(input);
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

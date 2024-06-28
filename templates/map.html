@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; 
+            background: rgb(238,174,202);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(89,225,226,1) 65%, rgba(148,187,233,0.9921218487394958) 100%);
+            /* background: rgb(63,94,251);
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+            background-color: #00f2a2;
+            opacity: 1;
+            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #00f2a2 40px ), repeating-linear-gradient( #006aff55, #006aff );
+        }
+        .head{
+            color: rgb(0, 72, 92);
+            font-weight: 800;
+            /* border: 3px solid #006aff; */
+        }
+        .container {
+            margin-top: 20px;
+            /* margin-bottom: 20px; */
+            /* background-color: cadetblue; */
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        iframe {
+            border: none;
+            border-radius: 10px;
+        }
+        .card {
+            border-radius: 10px;
+            background-color: cadetblue;
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(5px);            
+            -webkit-backdrop-filter: blur(5px);   
+            color: white;                          
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+            outline: none; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card-body {
+            padding: 20px;
+            /* border-radius: 50%; */
+        }
+        .button{
+            background: green;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);            
+        }
+        .button:hover {
+    background: darkgreen;
+}
+
+.button:active {
+    background: limegreen;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="head">Your journey is ready!</h1>
+                <iframe src="{{ url_for('static', filename='tsp_route.html') }}" width="100%" height="600px"></iframe>
+                <div class="button">
+                    <a href="/" class="btn btn-primary">Plan Another Route</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #b3fff1;
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+            /*background-color: #00f2a2;
+            opacity: 1;
+            background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #00f2a2 40px ), repeating-linear-gradient( #006aff55, #006aff ); */
+        }
+        .container {
+            margin-top: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: black;
+            font-weight: 600;
+        }
+        iframe {
+            border: none;
+            border-radius: 10px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+            outline: none; 
+        }
+        .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1>Your journey</h1>
+                <iframe src="{{ url_for('static', filename='tsp_route.html') }}" width="100%" height="600px"></iframe>
+                <div class="text-center mt-4">
+                    <a href="/" class="btn btn-primary">Plan Another Route</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
